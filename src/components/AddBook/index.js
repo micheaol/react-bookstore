@@ -1,9 +1,19 @@
 import React from 'react';
+import {
+  FormContainer,
+  AddBookInput,
+  CategoryInput,
+  FormWrapper,
+} from './AddBookElements';
 
 const AddBook = () => (
-  <div>
-    <h1>Hello Add book component</h1>
-  </div>
+  <FormWrapper>
+    <FormContainer>
+      <AddBookInput />
+      <CategoryInput />
+
+    </FormContainer>
+  </FormWrapper>
 );
 
 export default AddBook;
