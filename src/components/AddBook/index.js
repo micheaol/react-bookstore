@@ -1,17 +1,20 @@
 import React from 'react';
+import Button from '../ButtonElements';
 import {
   FormContainer,
   AddBookInput,
   CategoryInput,
   FormWrapper,
+  Headings,
 } from './AddBookElements';
 
 const AddBook = () => (
   <FormWrapper>
+    <Headings>ADD NEW BOOK</Headings>
     <FormContainer>
-      <AddBookInput />
-      <CategoryInput />
-
+      <AddBookInput placeholder="Book title" />
+      <CategoryInput placeholder="Category" />
+      <Button>ADD BOOK</Button>
     </FormContainer>
   </FormWrapper>
 );
