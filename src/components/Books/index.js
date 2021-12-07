@@ -1,10 +1,11 @@
 import React from 'react';
 import AddBook from '../AddBook';
 import BookList from '../BookList';
+import Navbar from '../Navbar';
 
 const index = () => (
   <>
-    <h1>Books home page</h1>
+    <Navbar />
     <BookList />
     <AddBook />
   </>

@@ -122,13 +122,14 @@ export const BookSectionTwo = styled.div`
 `;
 
 export const CircleCenter = styled.div`
-    border-radius: 50px;
-    width: 5.25rem;
-    height: 5.25rem;
-    border-style: solid;
-    border-width: 5px;
-    border-image-source: linear-gradient(to bottom, #4EA0CF, #379cf6);
-    border-image-slice: 1;
+width: 50px;
+height: 50px;
+background-color: transparent;
+border: solid 10px #ddd;
+border-top-color: #6e91b9;
+border-bottom-color: #9983e7;
+border-radius: 50%;
+
     
 `;
 

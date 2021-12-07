@@ -13,7 +13,7 @@ const AddBook = () => (
     <Headings>ADD NEW BOOK</Headings>
     <FormContainer>
       <AddBookInput placeholder="Book title" />
-      <CategoryInput placeholder="Category" />
+      <CategoryInput placeholder="Under construction" />
       <Button>ADD BOOK</Button>
     </FormContainer>
   </FormWrapper>
