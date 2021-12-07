@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.div`
@@ -30,7 +31,7 @@ export const NavItems = styled.div`
     
 `;
 
-export const MenuItems = styled.span`
+export const MenuLinks = styled(Link)`
     width: 3.688rem;
     height: 1rem;
     margin: 1.125rem 2.563rem 0.688rem 0;
@@ -42,6 +43,8 @@ export const MenuItems = styled.span`
     line-height: normal;
     letter-spacing: 1.9px;
     color: #121212;
+    cursor: pointer;
+    text-decoration: none;
 `;
 
 export const NavbarIcon = styled.span`

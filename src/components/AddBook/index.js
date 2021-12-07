@@ -9,7 +9,7 @@ import {
 } from './AddBookElements';
 
 const AddBook = () => (
-  <FormWrapper>
+  <FormWrapper id="add-books">
     <Headings>ADD NEW BOOK</Headings>
     <FormContainer>
       <AddBookInput placeholder="Book title" />
