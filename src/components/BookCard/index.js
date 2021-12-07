@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   BookCardWrapper,
   BookSectionOne,
@@ -22,13 +23,13 @@ import {
   BookLineDivider,
 } from './BookCardElements';
 
-const BookCard = () => (
+const BookCard = ({ title, author }) => (
   <BookContainer>
     <BookCardWrapper>
       <BookSectionOne>
         <BookCategory>Prayer Book</BookCategory>
-        <BookTitle>Dune</BookTitle>
-        <BookAuthor>Michael Oladele</BookAuthor>
+        <BookTitle>{title}</BookTitle>
+        <BookAuthor>{author}</BookAuthor>
         <BookCommandsWrapper>
           <Comments>Comments</Comments>
           <BookRemove>Remove</BookRemove>
@@ -51,5 +52,10 @@ const BookCard = () => (
     </BookCardWrapper>
   </BookContainer>
 );
+
+BookCard.propTypes = {
+  title: PropTypes.node.isRequired,
+  author: PropTypes.node.isRequired,
+};
 
 export default BookCard;
