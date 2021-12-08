@@ -1,8 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../../redux/books/books';
+import { addBook } from '../../redux/books/books';
 import {
   FormContainer,
   AddBookInput,
