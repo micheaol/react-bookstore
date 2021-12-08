@@ -17,9 +17,9 @@ const AddBook = () => {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: e.target.title.value,
-      author: e.target.author.value,
+      category: e.target.author.value,
 
     };
 
