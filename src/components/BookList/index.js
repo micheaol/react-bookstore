@@ -6,7 +6,6 @@ import { BookListWrapper } from './BookListElements';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
-  console.log(books);
   const [title, updateTitle] = useState('Dune');
   const [author, updateAuthor] = useState('Michael Oladele');
 
