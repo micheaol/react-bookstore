@@ -3,13 +3,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, removeBook } from '../../redux/books/books';
-import Button from '../ButtonElements';
 import {
   FormContainer,
   AddBookInput,
   CategoryInput,
   FormWrapper,
   Headings,
+  Button,
 } from './AddBookElements';
 
 const AddBook = () => {
@@ -25,18 +25,18 @@ const AddBook = () => {
     };
 
     dispatch(addBook(newBook));
-    // e.target.title.value = '';
-    // e.target.author.value = '';
+    e.target.title.value = '';
+    e.target.author.value = '';
   };
 
   return (
     <FormWrapper id="add-books">
       <Headings>ADD NEW BOOK</Headings>
-      <FormContainer>
+      <FormContainer onSubmit={submitBookToStore}>
         <AddBookInput placeholder="Book title" name="title" />
         <AddBookInput placeholder="Book author" name="author" />
         <CategoryInput placeholder="Under construction" />
-        <Button onClick={submitBookToStore}>ADD BOOK</Button>
+        <Button type="submit">ADD BOOK</Button>
       </FormContainer>
     </FormWrapper>
   );

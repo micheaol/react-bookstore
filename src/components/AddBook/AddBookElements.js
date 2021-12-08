@@ -8,9 +8,8 @@ export const FormWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 2.813rem;
-
-    
 `;
+
 export const FormContainer = styled.form`
     width: 100%;
     display: flex;
@@ -18,7 +17,6 @@ export const FormContainer = styled.form`
     gap: 2.813rem;
     align-items: center;
     justify-content: center;
-   
 `;
 
 export const AddBookInput = styled.input`
@@ -47,4 +45,17 @@ letter-spacing: -0.18px;
 color: #888;
 align-self: flex-start;
 margin-left: 5%;
+`;
+
+export const Button = styled.button`
+border-radius: 3px;
+outline: none;
+border: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.2s ease-in-out;
+width: 11.5rem;
+
 `;
