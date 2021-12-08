@@ -99,6 +99,7 @@ export const BookRemove = styled.span`
     line-height: normal;
     letter-spacing: normal;
     color: #4386bf;
+    cursor: pointer;
 `;
 
 export const BookEdit = styled.span`
