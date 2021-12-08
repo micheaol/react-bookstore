@@ -1,11 +1,10 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import BookCard from '../BookCard';
 import { BookListWrapper } from './BookListElements';
 
 const BookList = () => {
-  const [title, updateTitle] = useState('Dune');
-  const [author, updateAuthor] = useState('Michael Oladele');
+  const [title] = useState('Dune');
+  const [author] = useState('Michael Oladele');
 
   return (
     <BookListWrapper id="books">
