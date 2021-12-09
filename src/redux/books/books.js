@@ -12,6 +12,24 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const ADD_BOOK_SUCCESS = 'bookStore/books/ADD_BOOK_SUCCESS';
 const ADD_BOOK_STARTED = 'bookStore/books/ADD_BOOK_STARTED';
 const ADD_BOOK_FAILURE = 'bookStore/books/ADD_BOOK_FAILURE';
+const FETCH_BOOKS_SUCCESS = 'bookStore/books/FETCH_BOOKS_SUCCESS';
+const FETCH_BOOKS_STARTED = 'bookStore/books/FETCH_BOOKS_STARTED';
+const FETCH_BOOKS_FAILURE = 'bookStore/books/FETCH_BOOKS_FAILURE';
+
+export const fetchBooksSuccess = (books) => ({
+  type: FETCH_BOOKS_SUCCESS,
+  payload: books,
+
+});
+
+export const fetchBookStarted = () => ({
+  type: FETCH_BOOKS_STARTED,
+});
+
+export const fetchBookFailure = (error) => ({
+  type: FETCH_BOOKS_FAILURE,
+  payload: error,
+});
 
 export const addBookSuccess = (book) => ({
   type: ADD_BOOK_SUCCESS,
@@ -30,6 +48,15 @@ export const addBookFailure = (error) => ({
     error,
   },
 });
+
+// export const fetchBooks = () => (dispatch) => {
+//   axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books').then(res => {
+//     const books = res.data
+//   })
+//   .catch(err => {
+
+//   })
+// };
 
 export const addBook = ({ itemId = uuidv4(), title, category }) => (dispatch) => {
   dispatch(addBookStarted());
