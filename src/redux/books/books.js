@@ -1,11 +1,11 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable prefer-destructuring */
 // import bookStoreApi from '../../apis/bookStoreApi';
+import _ from 'lodash';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
-const initialState = {
-  books: [],
-};
+const initialState = [];
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -16,10 +16,9 @@ const FETCH_BOOKS_SUCCESS = 'bookStore/books/FETCH_BOOKS_SUCCESS';
 const FETCH_BOOKS_STARTED = 'bookStore/books/FETCH_BOOKS_STARTED';
 const FETCH_BOOKS_FAILURE = 'bookStore/books/FETCH_BOOKS_FAILURE';
 
-export const fetchBooksSuccess = (books) => ({
+export const fetchBooksSuccess = (payload) => ({
   type: FETCH_BOOKS_SUCCESS,
-  payload: books,
-
+  payload,
 });
 
 export const fetchBookStarted = () => ({
@@ -31,11 +30,9 @@ export const fetchBookFailure = (error) => ({
   payload: error,
 });
 
-export const addBookSuccess = (book) => ({
+export const addBookSuccess = (payload) => ({
   type: ADD_BOOK_SUCCESS,
-  payload: {
-    ...book,
-  },
+  payload,
 });
 
 export const addBookStarted = () => ({
@@ -49,14 +46,19 @@ export const addBookFailure = (error) => ({
   },
 });
 
-// export const fetchBooks = () => (dispatch) => {
-//   axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books').then(res => {
-//     const books = res.data
-//   })
-//   .catch(err => {
-
-//   })
-// };
+export const fetchBooks = () => (dispatch) => {
+  dispatch(fetchBookStarted());
+  axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books').then((res) => {
+    const books = res.data;
+    const bookData = [];
+    _.forEach(books, ([book], key) => bookData.push({ id: key, ...book }));
+    // console.log(bookData);
+    dispatch(fetchBooksSuccess(bookData));
+  }).catch((err) => {
+    const erroMesage = err.message;
+    dispatch(fetchBookFailure(erroMesage));
+  });
+};
 
 export const addBook = ({ itemId = uuidv4(), title, category }) => (dispatch) => {
   dispatch(addBookStarted());
@@ -81,23 +83,24 @@ export const removeBook = (payload) => ({
 const bookReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_BOOK_STARTED:
-      return {
-        ...state,
-      };
+      return state;
+    case FETCH_BOOKS_STARTED:
+      return state;
+    case FETCH_BOOKS_SUCCESS:
+      return payload;
+    case FETCH_BOOKS_FAILURE:
+      return state;
     case ADD_BOOK_SUCCESS:
-      return {
-        ...state,
-        books: [...state.books, payload],
-      };
+      return payload;
     case ADD_BOOK_FAILURE:
-      return {
-        ...state,
-        error: payload.error,
-      };
+      return state;
     case ADD_BOOK:
-      return { books: [...state.books, payload] };
+      return payload;
     case REMOVE_BOOK:
-      return state.books.filter((book) => book.id !== payload.id);
+      // return state.books.filter((book) => book.id !== payload.id);
+      const newState = _.filter(state, (book) => book.id !== payload.id);
+      // console.log(newState);
+      return newState;
     default:
       return state;
   }

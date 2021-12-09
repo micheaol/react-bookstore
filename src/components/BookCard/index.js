@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
+// import { useDispatch } from 'react-redux';
+// import PropTypes from 'prop-types';
+// import _ from 'lodash';
 import {
   BookCardWrapper,
   BookSectionOne,
   BookCategory,
   BookContainer,
   BookTitle,
-  BookAuthor,
+  // BookAuthor,
   BookCommandsWrapper,
   Comments,
   BookRemove,
@@ -24,27 +25,21 @@ import {
   UpdateProgress,
   BookLineDivider,
 } from './BookCardElements';
-import { removeBook } from '../../redux/books/books';
+// import { removeBook } from '../../redux/books/books';
 
-const BookCard = ({ title, author }) => {
-  const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
-
-  const removeBookFromStore = (e) => {
-    const listItem = e.target.parentNode.parentNode;
-    const bookId = listItem.getAttribute('data-id');
-    const book = _.find(books, { id: bookId });
-
-    dispatch(removeBook(book));
-  };
+const BookCard = ({ book, removeBookFromStore }) => {
+  // const dispatch = useDispatch();
+  // const book = useSelector((state) => state.book);
+  // _.forEach(book, (b) => console.log(b));
+  console.log(book);
 
   return (
     <BookContainer>
       <BookCardWrapper>
-        <BookSectionOne>
-          <BookCategory>Prayer Book</BookCategory>
-          <BookTitle>{title}</BookTitle>
-          <BookAuthor>{author}</BookAuthor>
+        <BookSectionOne data-id={book.id}>
+          <BookCategory>{book.category}</BookCategory>
+          <BookTitle>{book.title}</BookTitle>
+          {/* <BookAuthor>Hi</BookAuthor> */}
           <BookCommandsWrapper>
             <Comments>Comments</Comments>
             <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>
@@ -69,9 +64,9 @@ const BookCard = ({ title, author }) => {
   );
 };
 
-BookCard.propTypes = {
-  title: PropTypes.node.isRequired,
-  author: PropTypes.node.isRequired,
-};
+// BookCard.propTypes = {
+//   title: PropTypes.node.isRequired,
+//   author: PropTypes.node.isRequired,
+// };
 
 export default BookCard;
