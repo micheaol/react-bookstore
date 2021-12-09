@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
 import {
   FormContainer,
@@ -17,7 +16,7 @@ const AddBook = () => {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      item_id: uuidv4(),
+      // item_id: uuidv4(),
       title: e.target.title.value,
       category: e.target.author.value,
 
