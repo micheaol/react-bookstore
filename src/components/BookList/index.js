@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { connect } from 'react-redux';
 import _ from 'lodash';
-import { fetchBooks, removeBook } from '../../redux/books/books';
+import { deleteBook, fetchBooks, removeBook } from '../../redux/books/books';
 
 import BookCard from '../BookCard';
 import { BookListWrapper } from './BookListElements';
@@ -25,9 +25,10 @@ const BookList = () => {
   const removeBookFromStore = (e) => {
     const listItem = e.target.parentNode.parentNode;
     const bookId = listItem.getAttribute('data-id');
-    const book = _.find(books, { id: bookId });
+    // const book = _.find(books, { id: bookId });
     // console.log(book);
-    dispatch(removeBook(book));
+    // dispatch(removeBook(book));
+    dispatch(deleteBook(bookId));
   };
 
   useEffect(() => {

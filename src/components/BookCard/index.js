@@ -31,7 +31,7 @@ const BookCard = ({ book, removeBookFromStore }) => {
   // const dispatch = useDispatch();
   // const book = useSelector((state) => state.book);
   // _.forEach(book, (b) => console.log(b));
-  console.log(book);
+  console.log('book card');
 
   return (
     <BookContainer>

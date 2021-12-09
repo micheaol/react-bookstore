@@ -16,6 +16,11 @@ const FETCH_BOOKS_SUCCESS = 'bookStore/books/FETCH_BOOKS_SUCCESS';
 const FETCH_BOOKS_STARTED = 'bookStore/books/FETCH_BOOKS_STARTED';
 const FETCH_BOOKS_FAILURE = 'bookStore/books/FETCH_BOOKS_FAILURE';
 
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
+});
+
 export const fetchBooksSuccess = (payload) => ({
   type: FETCH_BOOKS_SUCCESS,
   payload,
@@ -46,6 +51,11 @@ export const addBookFailure = (error) => ({
   },
 });
 
+// export const deleteABook = (bookId) => ({
+//   type: REMOVE_BOOK,
+//   bookId,
+// });
+
 export const fetchBooks = () => (dispatch) => {
   dispatch(fetchBookStarted());
   axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books').then((res) => {
@@ -75,10 +85,11 @@ export const addBook = ({ itemId = uuidv4(), title, category }) => (dispatch) =>
     });
 };
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
+export const deleteBook = (id) => (dispatch) => {
+  axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books/${id}`);
+  console.log(id);
+  dispatch(removeBook(id));
+};
 
 const bookReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -98,8 +109,8 @@ const bookReducer = (state = initialState, { type, payload }) => {
       return payload;
     case REMOVE_BOOK:
       // return state.books.filter((book) => book.id !== payload.id);
-      const newState = _.filter(state, (book) => book.id !== payload.id);
-      // console.log(newState);
+      const newState = _.filter(state, (book) => book.id !== payload);
+      console.log('my payload', payload);
       return newState;
     default:
       return state;
