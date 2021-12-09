@@ -1,6 +1,4 @@
 /* eslint-disable no-case-declarations */
-/* eslint-disable prefer-destructuring */
-// import bookStoreApi from '../../apis/bookStoreApi';
 import _ from 'lodash';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
@@ -50,11 +48,6 @@ export const addBookFailure = (error) => ({
     error,
   },
 });
-
-// export const deleteABook = (bookId) => ({
-//   type: REMOVE_BOOK,
-//   bookId,
-// });
 
 export const fetchBooks = () => (dispatch) => {
   dispatch(fetchBookStarted());
@@ -108,9 +101,7 @@ const bookReducer = (state = initialState, { type, payload }) => {
     case ADD_BOOK:
       return payload;
     case REMOVE_BOOK:
-      // return state.books.filter((book) => book.id !== payload.id);
       const newState = _.filter(state, (book) => book.id !== payload);
-      console.log('my payload', payload);
       return newState;
     default:
       return state;
