@@ -69,8 +69,7 @@ export const addBook = ({ itemId = uuidv4(), title, category }) => (dispatch) =>
     title,
     category,
   })
-    .then((res) => {
-      dispatch(addBookSuccess(res.data));
+    .then(() => {
     })
     .catch((err) => {
       dispatch(addBookFailure(err.message));

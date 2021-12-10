@@ -23,32 +23,34 @@ import {
 } from './BookCardElements';
 
 const BookCard = ({ book, removeBookFromStore }) => (
-  <BookContainer>
-    <BookCardWrapper>
-      <BookSectionOne data-id={book.id}>
-        <BookCategory>{book.category}</BookCategory>
-        <BookTitle>{book.title}</BookTitle>
-        <BookCommandsWrapper>
-          <Comments>Comments</Comments>
-          <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>
-          <BookEdit>Edit</BookEdit>
-        </BookCommandsWrapper>
-      </BookSectionOne>
-      <BookSectionTwo>
-        <CircleCenter />
-        <CompletedWrapper>
-          <CompletedPerc>8%</CompletedPerc>
-          <CompletedText>Completed</CompletedText>
-        </CompletedWrapper>
-      </BookSectionTwo>
-      <BookLineDivider />
-      <BookSectionThree>
-        <BookChapter>Current Chapter</BookChapter>
-        <BookLesson>Chapter3: ALessonLearned </BookLesson>
-        <UpdateProgress>Update progress</UpdateProgress>
-      </BookSectionThree>
-    </BookCardWrapper>
-  </BookContainer>
+  <>
+    <BookContainer>
+      <BookCardWrapper>
+        <BookSectionOne data-id={book.id}>
+          <BookCategory>{book.category}</BookCategory>
+          <BookTitle>{book.title}</BookTitle>
+          <BookCommandsWrapper>
+            <Comments>Comments</Comments>
+            <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>
+            <BookEdit>Edit</BookEdit>
+          </BookCommandsWrapper>
+        </BookSectionOne>
+        <BookSectionTwo>
+          <CircleCenter />
+          <CompletedWrapper>
+            <CompletedPerc>8%</CompletedPerc>
+            <CompletedText>Completed</CompletedText>
+          </CompletedWrapper>
+        </BookSectionTwo>
+        <BookLineDivider />
+        <BookSectionThree>
+          <BookChapter>Current Chapter</BookChapter>
+          <BookLesson>Chapter3: ALessonLearned </BookLesson>
+          <UpdateProgress>Update progress</UpdateProgress>
+        </BookSectionThree>
+      </BookCardWrapper>
+    </BookContainer>
+  </>
 );
 
 BookCard.propTypes = {

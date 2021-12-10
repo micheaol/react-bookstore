@@ -9,6 +9,7 @@ import { BookListWrapper } from './BookListElements';
 const BookList = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
+  console.log(books);
 
   const removeBookFromStore = (e) => {
     const listItem = e.target.parentNode.parentNode;
