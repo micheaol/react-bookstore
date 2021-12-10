@@ -1,5 +1,6 @@
 import React from 'react';
-import { BsPersonCircle } from 'react-icons/bs';
+import { BsFillPersonFill } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import {
   Nav,
@@ -18,7 +19,11 @@ const Navbar = () => (
         <MenuLinks to="/">BOOKS</MenuLinks>
         <MenuLinks to="/add-books">CATEGORIES</MenuLinks>
       </NavItems>
-      <NavbarIcon>{BsPersonCircle}</NavbarIcon>
+      <IconContext.Provider value={{ color: 'blue', size: '2.5rem' }}>
+        <NavbarIcon className="global-class-name">
+          <BsFillPersonFill />
+        </NavbarIcon>
+      </IconContext.Provider>
     </Nav>
 
   </>

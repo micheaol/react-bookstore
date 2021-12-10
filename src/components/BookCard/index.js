@@ -20,6 +20,7 @@ import {
   BookLesson,
   UpdateProgress,
   BookLineDivider,
+  BookAuthor,
 } from './BookCardElements';
 
 const BookCard = ({ book, removeBookFromStore }) => (
@@ -29,6 +30,7 @@ const BookCard = ({ book, removeBookFromStore }) => (
         <BookSectionOne data-id={book.id}>
           <BookCategory>{book.category}</BookCategory>
           <BookTitle>{book.title}</BookTitle>
+          <BookAuthor>Michael Oladele</BookAuthor>
           <BookCommandsWrapper>
             <Comments>Comments</Comments>
             <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>

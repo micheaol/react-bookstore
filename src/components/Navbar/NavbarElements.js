@@ -52,7 +52,10 @@ export const NavbarIcon = styled.span`
     width: 2.813rem;
     height: 2.813rem;
     margin: 0 0 0 41.5rem;
-    padding: 0.875rem;
+    padding: 0.775rem;
     border: solid 1px #C7BFBF;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
