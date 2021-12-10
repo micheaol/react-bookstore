@@ -31,7 +31,7 @@ const AddBook = () => {
       <Headings>ADD NEW BOOK</Headings>
       <FormContainer onSubmit={submitBookToStore}>
         <AddBookInput placeholder="Book title" name="title" />
-        <CategoryInput placeholder="Under construction" name="category" />
+        <CategoryInput placeholder="Category" name="category" />
         <Button type="submit">ADD BOOK</Button>
       </FormContainer>
     </FormWrapper>

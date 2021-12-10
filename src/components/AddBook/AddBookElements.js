@@ -44,18 +44,27 @@ line-height: normal;
 letter-spacing: -0.18px;
 color: #888;
 align-self: flex-start;
-margin-left: 5%;
+margin-left: 2%;
 `;
 
 export const Button = styled.button`
 border-radius: 3px;
 outline: none;
 border: none;
+background-color: #0290ff;
+font-family: RobotoSlab-Light;
 cursor: pointer;
-display: flex;
+color: white;
+// display: flex;
 justify-content: center;
 align-items: center;
 transition: all 0.2s ease-in-out;
 width: 11.5rem;
-
+width: 11.5rem;
+height: 2.063rem;
+margin: 0.75rem 1.75rem 0.563rem 3.688rem;
+padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+font-size: 1.1rem;
+font-weight: 300;
+text-align: center;
 `;

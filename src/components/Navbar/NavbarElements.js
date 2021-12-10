@@ -17,13 +17,14 @@ export const NavbarLogo = styled.span`
   width: 15rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat-Bold;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  color: #0290ff;
 `;
 
 export const NavItems = styled.div`

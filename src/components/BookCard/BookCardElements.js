@@ -41,10 +41,10 @@ color: #121212;
 `;
 
 export const BookTitle = styled.span`
-    width: 3.375rem;
-    height: 1.813rem;
+    width: 8.375rem;
+    height: 2.813rem;
     margin: 0.188rem 2.125rem 0 0;
-    font-family: RobotoSlab;
+    font-family: RobotoSlab-Bold;
     font-size: 1.375rem;
     font-weight: bold;
     font-stretch: normal;
@@ -55,11 +55,11 @@ export const BookTitle = styled.span`
 `;
 
 export const BookAuthor = styled.span`
-    width: 5.813rem;
+    width: 7.813rem;
     height: 1.188rem;
     margin: 0.25rem 0.875rem 0 0;
     font-family: RobotoSlab;
-    font-size: 0.875rem;
+    font-size: 0.975rem;
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
@@ -123,28 +123,28 @@ export const BookSectionTwo = styled.div`
 `;
 
 export const CircleCenter = styled.div`
-width: 50px;
-height: 50px;
-background-color: transparent;
-border: solid 10px #ddd;
-border-top-color: #6e91b9;
-border-bottom-color: #9983e7;
-border-radius: 50%;
-
-    
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: solid 10px #ddd;
+    border-top-color: #6e91b9;
+    border-bottom-color: #9983e7;
+    border-radius: 50%;
+    margin-top: 20%;
 `;
 
 export const CompletedWrapper = styled.div`
         width: 15%;
         display: flex;
         flex-direction: column;
+        padding-top: 8%;
 `;
 
 export const CompletedPerc = styled.span`
         width: 2.938rem;
         height: 2.438rem;
         margin: 0.063rem 7.063rem 0 0.688rem;
-        font-family: Montserrat;
+        font-family: Montserrat-Regular;        ;
         font-size: 2rem;
         font-weight: normal;
         font-stretch: normal;
@@ -214,9 +214,10 @@ export const UpdateProgress = styled.div`
     padding: 0.438rem 1.188rem 0.5rem 1.375rem;
     border-radius: 3px;
     background-color: #0290ff;
-    font-family: RobotoSlab;
-    font-size: 0.813rem;
+    font-family: RobotoSlab-Light;
+    font-size: 1.1rem;
     font-weight: 300;
+    text-align: center;
 `;
 
 export const BookLineDivider = styled.div`
