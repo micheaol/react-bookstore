@@ -46,7 +46,7 @@ react-bookstore is built to practice ES6 syntax. Built with React, JavaScript, C
 - Fullname: Michael Oladele
 - GitHub: [@micheaol](https://github.com/micheaol)
 - Twitter: [@micheaol](https://twitter.com/micheaol)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/micheaol80)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/micheaol)
 
 
 ## 🤝 Contributing
