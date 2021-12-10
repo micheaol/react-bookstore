@@ -218,6 +218,7 @@ export const UpdateProgress = styled.div`
     font-size: 1.1rem;
     font-weight: 300;
     text-align: center;
+    color: white;
 `;
 
 export const BookLineDivider = styled.div`
