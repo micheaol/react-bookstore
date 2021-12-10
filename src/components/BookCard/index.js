@@ -21,6 +21,7 @@ import {
   UpdateProgress,
   BookLineDivider,
   BookAuthor,
+  BookLineDividerSmall,
 } from './BookCardElements';
 
 const BookCard = ({ book, removeBookFromStore }) => (
@@ -33,7 +34,9 @@ const BookCard = ({ book, removeBookFromStore }) => (
           <BookAuthor>Michael Oladele</BookAuthor>
           <BookCommandsWrapper>
             <Comments>Comments</Comments>
+            <BookLineDividerSmall />
             <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>
+            <BookLineDividerSmall />
             <BookEdit>Edit</BookEdit>
           </BookCommandsWrapper>
         </BookSectionOne>

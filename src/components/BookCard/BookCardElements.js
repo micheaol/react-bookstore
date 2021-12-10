@@ -226,3 +226,9 @@ export const BookLineDivider = styled.div`
     margin: 1.125rem 3.688rem 0 4.938rem;
     border: solid 1px #e8e8e8;
 `;
+
+export const BookLineDividerSmall = styled.span`
+width: 0.125rem;
+height: 1.375rem;
+border: solid 1px #e8e8e8;
+`;
