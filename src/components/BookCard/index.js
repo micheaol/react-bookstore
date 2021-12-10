@@ -1,14 +1,11 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import {
   BookCardWrapper,
   BookSectionOne,
   BookCategory,
   BookContainer,
   BookTitle,
-  BookAuthor,
   BookCommandsWrapper,
   Comments,
   BookRemove,
@@ -24,27 +21,14 @@ import {
   UpdateProgress,
   BookLineDivider,
 } from './BookCardElements';
-import { removeBook } from '../../redux/books/books';
 
-const BookCard = ({ title, author }) => {
-  const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
-
-  const removeBookFromStore = (e) => {
-    const listItem = e.target.parentNode.parentNode;
-    const bookId = listItem.getAttribute('data-id');
-    const book = _.find(books, { id: bookId });
-
-    dispatch(removeBook(book));
-  };
-
-  return (
+const BookCard = ({ book, removeBookFromStore }) => (
+  <>
     <BookContainer>
       <BookCardWrapper>
-        <BookSectionOne>
-          <BookCategory>Prayer Book</BookCategory>
-          <BookTitle>{title}</BookTitle>
-          <BookAuthor>{author}</BookAuthor>
+        <BookSectionOne data-id={book.id}>
+          <BookCategory>{book.category}</BookCategory>
+          <BookTitle>{book.title}</BookTitle>
           <BookCommandsWrapper>
             <Comments>Comments</Comments>
             <BookRemove onClick={removeBookFromStore}>Remove</BookRemove>
@@ -66,12 +50,12 @@ const BookCard = ({ title, author }) => {
         </BookSectionThree>
       </BookCardWrapper>
     </BookContainer>
-  );
-};
+  </>
+);
 
 BookCard.propTypes = {
-  title: PropTypes.node.isRequired,
-  author: PropTypes.node.isRequired,
+  book: PropTypes.node.isRequired,
+  removeBookFromStore: PropTypes.node.isRequired,
 };
 
 export default BookCard;

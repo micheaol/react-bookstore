@@ -9,12 +9,8 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/">
-          <BookList />
-        </Route>
-        <Route exact path="/add-books">
-          <AddBook />
-        </Route>
+        <Route exact path="/" component={BookList} />
+        <Route exact path="/add-books" component={AddBook} />
       </Switch>
     </Router>
 
