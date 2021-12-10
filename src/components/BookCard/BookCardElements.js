@@ -126,9 +126,10 @@ export const CircleCenter = styled.div`
     width: 60px;
     height: 60px;
     background-color: transparent;
-    border: solid 10px #ddd;
-    border-top-color: #6e91b9;
-    border-bottom-color: #9983e7;
+    border: solid 5px #ddd;
+    border-top-color: #379cf6;
+    border-bottom-color: #379cf6;
+    border-right-color: #379cf6;
     border-radius: 50%;
     margin-top: 20%;
 `;
