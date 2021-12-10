@@ -42,7 +42,7 @@ color: #121212;
 
 export const BookTitle = styled.span`
     width: 8.375rem;
-    height: 2.813rem;
+    height: 1.813rem;
     margin: 0.188rem 2.125rem 0 0;
     font-family: RobotoSlab-Bold;
     font-size: 1.375rem;
@@ -66,7 +66,7 @@ export const BookAuthor = styled.span`
     line-height: normal;
     letter-spacing: normal;
     color: #4386bf;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 `;
 
 export const BookCommandsWrapper = styled.div`
