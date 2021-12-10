@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
 export const FormWrapper = styled.div`
-    width: 100%;
+    width: 89%;
     max-width: 1300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 2.813rem;
+    // margin: 2.813rem;
+    padding-top: 1.81rem;
+    border-top: solid 1px #e8e8e8;
+    margin-left: 7%;
 `;
 
 export const FormContainer = styled.form`
     width: 100%;
     display: flex;
-    margin: 1.813rem;
+    margin: 0.813rem;
     gap: 2.813rem;
     align-items: center;
     justify-content: center;
@@ -34,7 +37,7 @@ export const CategoryInput = styled.input`
 export const Headings = styled.span`
 width: 10.875rem;
 height: 1.5rem;
-margin: 1.813rem 32.75rem 1.188rem 0;
+// margin: 1.813rem 32.75rem 1.188rem 0;
 font-family: Montserrat;
 font-size: 1.25rem;
 font-weight: bold;
@@ -44,7 +47,7 @@ line-height: normal;
 letter-spacing: -0.18px;
 color: #888;
 align-self: flex-start;
-margin-left: 2%;
+// margin-left: 2%;
 `;
 
 export const Button = styled.button`
