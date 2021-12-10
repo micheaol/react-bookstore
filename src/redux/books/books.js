@@ -55,7 +55,6 @@ export const fetchBooks = () => (dispatch) => {
     const books = res.data;
     const bookData = [];
     _.forEach(books, ([book], key) => bookData.push({ id: key, ...book }));
-    // console.log(bookData);
     dispatch(fetchBooksSuccess(bookData));
   }).catch((err) => {
     const erroMesage = err.message;
@@ -80,7 +79,6 @@ export const addBook = ({ itemId = uuidv4(), title, category }) => (dispatch) =>
 
 export const deleteBook = (id) => (dispatch) => {
   axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZFiVXR8MDsWp5znsZ8Qa/books/${id}`);
-  console.log(id);
   dispatch(removeBook(id));
 };
 

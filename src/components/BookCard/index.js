@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   BookCardWrapper,
   BookSectionOne,
@@ -21,7 +22,7 @@ import {
   BookLineDivider,
 } from './BookCardElements';
 
-const BookCard = ({ book, removeBookFromStore }) => {
+const BookCard = ({ book, removeBookFromStore }) => (
   <BookContainer>
     <BookCardWrapper>
       <BookSectionOne data-id={book.id}>
@@ -47,7 +48,12 @@ const BookCard = ({ book, removeBookFromStore }) => {
         <UpdateProgress>Update progress</UpdateProgress>
       </BookSectionThree>
     </BookCardWrapper>
-  </BookContainer>;
+  </BookContainer>
+);
+
+BookCard.propTypes = {
+  book: PropTypes.node.isRequired,
+  removeBookFromStore: PropTypes.node.isRequired,
 };
 
 export default BookCard;
