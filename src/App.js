@@ -10,8 +10,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={BookList} />
-        <Route exact path="/add-books" component={AddBook} />
       </Switch>
+      <AddBook />
     </Router>
 
   );

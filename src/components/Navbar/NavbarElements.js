@@ -17,13 +17,14 @@ export const NavbarLogo = styled.span`
   width: 15rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat-Bold;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  color: #0290ff;
 `;
 
 export const NavItems = styled.div`
@@ -51,7 +52,10 @@ export const NavbarIcon = styled.span`
     width: 2.813rem;
     height: 2.813rem;
     margin: 0 0 0 41.5rem;
-    padding: 0.875rem;
+    padding: 0.775rem;
     border: solid 1px #C7BFBF;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
