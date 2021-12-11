@@ -10,7 +10,6 @@ const BookList = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
 
-
   const removeBookFromStore = (e) => {
     const listItem = e.target.parentNode.parentNode;
     const bookId = listItem.getAttribute('data-id');
