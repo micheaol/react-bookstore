@@ -17,7 +17,7 @@ const Navbar = () => (
       <NavbarLogo> Bookstore CMS</NavbarLogo>
       <NavItems>
         <MenuLinks to="/">BOOKS</MenuLinks>
-        <MenuLinks to="/add-books">CATEGORIES</MenuLinks>
+        <MenuLinks to="/add-books">ADDBOOK</MenuLinks>
       </NavItems>
       <IconContext.Provider value={{ color: 'blue', size: '2.5rem' }}>
         <NavbarIcon className="global-class-name">
