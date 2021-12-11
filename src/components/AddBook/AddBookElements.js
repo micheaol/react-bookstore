@@ -9,7 +9,7 @@ export const FormWrapper = styled.div`
     align-items: center;
     // margin: 2.813rem;
     padding-top: 1.81rem;
-    border-top: solid 1px #e8e8e8;
+    // border-top: solid 1px #e8e8e8;
     margin-left: 7%;
 `;
 
