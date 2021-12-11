@@ -31,7 +31,7 @@ const BookCard = ({ book, removeBookFromStore }) => (
         <BookSectionOne data-id={book.id}>
           <BookCategory>{book.category}</BookCategory>
           <BookTitle>{book.title}</BookTitle>
-          <BookAuthor>Michael Oladele</BookAuthor>
+          <BookAuthor>Michael Oladele.</BookAuthor>
           <BookCommandsWrapper>
             <Comments>Comments</Comments>
             <BookLineDividerSmall />
