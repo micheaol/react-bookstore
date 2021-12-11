@@ -1,10 +1,19 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AddBook from './components/AddBook';
+import BookList from './components/BookList';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={BookList} />
+        <Route exact path="/add-books" component={AddBook} />
+      </Switch>
+    </Router>
+
   );
 }
 
