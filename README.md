@@ -5,9 +5,9 @@ This is book application to add books
 
 ![book](https://user-images.githubusercontent.com/10332499/145212140-c72029be-528a-45be-b848-9bacba168d8c.PNG)
 
-Additional description about the project and its features.
+Additional description about the project and its features:
 
-react-bookstore is built to practice ES6 syntax. Built with React, JavaScript, CSS, and Webpack.
+React-bookstore is built to practice ES6 syntax. Built with React, React-Router, JavaScript, CSS, and Webpack.
 
 ## Built With
 
